@@ -1,0 +1,60 @@
+POST http://localhost:3003/user/register/
+Content-Type: application/json
+
+{
+  "name":"Dhiraj",
+  "email": "dhiraj@gmail.com",
+  "password": "dhiraj"
+}
+###
+
+POST http://localhost:3003/user/login/
+Content-Type: application/json
+
+{
+ 
+  "email": "dhiraj@gmail.com",
+  "password": "dhiraj"
+}
+
+###
+
+POST http://localhost:3003/task/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NmNjNDgwZTcxMjE4NjAwY2Q3ZjI0MjUiLCJpYXQiOjE3MjQ2NjM4MzcsImV4cCI6MTcyNDY2NzQzN30.stb8xtko9LEQ9CnrIFNrgKzPwPc5ap9ASRaJ1JuBYZc
+
+{
+  "title": "Plan the meeting",
+  "description": " Schedule the meeting for the business discussion ",
+  "status": "pending"
+}
+
+###
+
+GET http://localhost:3003/task/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NmNjMmNjNjA2Njk0NTU0ODMxNzQ5NjAiLCJpYXQiOjE3MjQ2NjI4MDQsImV4cCI6MTcyNDY2NjQwNH0.xwL6m7HGtzHRdPwhX8AjxXIOcHBoInANodSwJWNeHBU
+###
+
+GET http://localhost:3003/task/66cc38e54c693df098906449
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NmNjMmNjNjA2Njk0NTU0ODMxNzQ5NjAiLCJpYXQiOjE3MjQ2NjI4MDQsImV4cCI6MTcyNDY2NjQwNH0.xwL6m7HGtzHRdPwhX8AjxXIOcHBoInANodSwJWNeHBU
+
+###
+PUT http://localhost:3003/task/66cc38e54c693df098906449
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NmNjMmNjNjA2Njk0NTU0ODMxNzQ5NjAiLCJpYXQiOjE3MjQ2NjIzMjMsImV4cCI6MTcyNDY2NTkyM30.7zsj1TCc9ytFeJq8QDGPhrI9DAUgYkTNJPqhN8ZFx-0
+
+{
+  "title": "Finish Project Report",
+  "description": "Write and finalize the project report for presentation.",
+  "status": "completed"
+}
+
+###
+DELETE http://localhost:3003/task/66cc48fd2cd8eb988dd445fa
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NmNjMmNjNjA2Njk0NTU0ODMxNzQ5NjAiLCJpYXQiOjE3MjQ2NjI4MDQsImV4cCI6MTcyNDY2NjQwNH0.xwL6m7HGtzHRdPwhX8AjxXIOcHBoInANodSwJWNeHBU
+
+###
+GET http://localhost:3001/
